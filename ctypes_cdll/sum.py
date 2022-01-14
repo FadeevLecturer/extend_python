@@ -7,7 +7,7 @@ import numpy as np
 np.set_printoptions(precision=2)
 
 def parse_args():
-    default_path = os.path.join("..", "libshared", "Debug", "libshared.dll")
+    default_path = os.path.join("..", "libshared", "libshared.so")
     
     parser = argparse.ArgumentParser(description='Sums a random numpy array.')
     parser.add_argument('shape',  type=int, nargs='+', help='Two terms to sum')

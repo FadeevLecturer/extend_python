@@ -1,11 +1,12 @@
 import sys
+
 import os
 import ctypes
 import argparse
 
 
 def parse_args():
-    default_path = os.path.join("..", "libshared", "Debug", "libshared.dll")
+    default_path = os.path.join("..", "libshared", "libshared.so")
     
     parser = argparse.ArgumentParser(description='Adds two integers.')
     parser.add_argument('terms',  type=int, nargs='+', help='Two terms to sum')
