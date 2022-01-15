@@ -5,5 +5,6 @@
 
 PyObject * hello(PyObject *);
 PyObject * bye(PyObject *, PyObject *);
+PyObject * call(PyObject *, PyObject *);
 
 #endif

@@ -2,8 +2,9 @@
 
 
 // function docstring
-char hellofunc_docs[] = "Says hello.";
-char byefunc_docs[] = "Says bye to the name specified.";
+char hellofunc_docs[] = "Says hello";
+char byefunc_docs[] = "Says bye to the name specified";
+char callfunc_docs[] = "Call funtion with one argument";
 
 
 PyMethodDef helloworld_funcs[] = {
@@ -19,6 +20,12 @@ PyMethodDef helloworld_funcs[] = {
 		METH_VARARGS, // VARARGS --- positional arguments
 		byefunc_docs // docstring
 	},
+	{
+		"call",
+		(PyCFunction)call,
+		METH_VARARGS,
+		callfunc_docs
+	},
 	{NULL}
 };
 
@@ -31,7 +38,7 @@ PyModuleDef helloworld_mod = {
 	PyModuleDef_HEAD_INIT, // special symbol
 	"helloworld", // name of module in python
 	helloworldmod_docs, // docstring
-	-1, //?
+	-1, 
 	helloworld_funcs // functions to export
 };
 
